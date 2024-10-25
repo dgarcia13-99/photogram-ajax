@@ -1,0 +1,5 @@
+//updates like/un-like button and updates photos.likes_count
+$("#<%= dom_id(@like.photo)%>_likes").replaceWith("<%= j(render "photos/likes", photo: @like.photo)%>");
+
+//update like count for user (to update in 'liked' tab on their profile)
+$("#<%= dom_id(@like.fan) %>_likes_count").replaceWith("<%= j(render 'users/profile_nav/likes_count', user: @like.fan) %>");
