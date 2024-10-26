@@ -4,6 +4,6 @@ added_comment.hide();
 
 $("#<%= dom_id(@comment.photo) %>_new_comment_form").before(added_comment);
 
-added_comment.slideDown();
+added_comment.fadeIn();
 
 $("#<%= dom_id(@comment.photo) %>_new_comment_form #comment_body").val("");
