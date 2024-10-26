@@ -1,6 +1,7 @@
 <% unless sender == recipient %>
   <% follow_request = current_user.sent_follow_requests.find_by(recipient: recipient) %>
 
+<!-- Format of class is inspired from target web page -->
 <div class="sender_<%= sender.id %>_recipient_<%= recipient.id %>_follow_unfollow">
   <% if follow_request %>
     <% if follow_request.pending? %>
